@@ -16,7 +16,8 @@ with open(filename, "r") as f:
 
 graph = networkx.graphml.read_graphml("graph.graphml")
 
-counter=0
+with open("node_count.txt", "r") as f:
+    counter = int(f.read())
 
 for chunk in doc.noun_chunks:
     graph.add_node(chunk.text)
@@ -25,5 +26,8 @@ for chunk in doc.noun_chunks:
     counter += 1
 
 print("Knowledge", graph, "created!")
+
+with open("node_count.txt", "r") as f:
+    f.write(str(counter))
 
 networkx.graphml.write_graphml_lxml(graph, "graph.graphml")

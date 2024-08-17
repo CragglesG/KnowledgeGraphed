@@ -24,4 +24,7 @@ for chunk in doc.noun_chunks:
 
 print("Knowledge", graph, "created!")
 
+with open("node_count.txt", "r") as f:
+    f.write(str(counter))
+
 networkx.graphml.write_graphml_lxml(graph, "graph.graphml")

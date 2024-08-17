@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="data" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="YayCo" />
+    <node id="Yuppa Inc." />
+    <node id="€500b" />
+    <node id="Yippee LLC" />
+    <edge source="YayCo" target="Yuppa Inc.">
+      <data key="d0">buying</data>
+    </edge>
+    <edge source="YayCo" target="Yippee LLC">
+      <data key="d0">to</data>
+    </edge>
+    <edge source="Yuppa Inc." target="€500b">
+      <data key="d0">for</data>
+    </edge>
+  </graph>
+</graphml>
