@@ -5,7 +5,6 @@ import spacy
 import pickle
 
 nlp = spacy.load('en_core_web_sm')
-graph = networkx.Graph()
 
 print("KnowledgeGraphed v0.1.0 (c) Craig Giles 2024")
 print("------------\n")
@@ -15,8 +14,7 @@ filename = input("Name of text file: ")
 with open(filename, "r") as f:
     doc = nlp(f.read())
 
-with open("graph.kg", "rb") as g:
-    graph = pickle.load(g)
+graph = networkx.graphml.read_graphml("graph.graphml")
 
 counter=0
 
@@ -28,5 +26,4 @@ for chunk in doc.noun_chunks:
 
 print("Knowledge", graph, "created!")
 
-with open("graph.kg", "wb") as f:
-    pickle.dump(graph, f)
+networkx.graphml.write_graphml_lxml(graph, "graph.graphml")

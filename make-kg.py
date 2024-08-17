@@ -2,7 +2,6 @@ print("Starting KnowledgeGraphed...")
 
 import networkx
 import spacy
-import pickle
 
 nlp = spacy.load('en_core_web_sm')
 graph = networkx.Graph()
@@ -25,5 +24,4 @@ for chunk in doc.noun_chunks:
 
 print("Knowledge", graph, "created!")
 
-with open("graph.kg", "wb") as f:
-    pickle.dump(graph, f)
+networkx.graphml.write_graphml_lxml(graph, "graph.graphml")
