@@ -1,6 +1,6 @@
 # KnowledgeGraphed
 
-KnowledgeGraphed is an in-development, experimental knowledge graph generator. It converts text data in a `.txt` file to a knowledge graph using NetworkX and spaCy.
+KnowledgeGraphed is an experimental knowledge graph generator. It converts text data in a `.txt` file to a knowledge graph using NetworkX and spaCy.
 
 **STRICTLY EXPERIMENTAL, DO NOT USE IN PRODUCTION**
 
