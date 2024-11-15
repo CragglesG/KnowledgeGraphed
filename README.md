@@ -57,7 +57,7 @@ _Tip: As with `kg-make`, you must provide the full path to the text file._
 
 ## Bugs & Limitations
 
-As KnowledgeGraphed is still in-development and experimental, it has many bugs and limitations. Below is a non-exhaustive list of known issues and areas for improvement:
+As KnowledgeGraphed is only experimental, it has many bugs and limitations. Below is a non-exhaustive list of known issues and areas for improvement:
 - `kg-extend` is buggy and does not function as desired
 - `kg-view` can only display labels on nodes, not edges
 - All knowledge graph information is stored unencrypted
